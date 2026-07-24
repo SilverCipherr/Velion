@@ -1,0 +1,15 @@
+# Force GitHub to only count these showcase files for the language bar
+* linguist-vendored
+
+# Assign languages to dummy files and make them detectable
+.showcase/android.kt linguist-language=Kotlin linguist-vendored=false
+.showcase/dashboard.js linguist-language=JavaScript linguist-vendored=false
+.showcase/controller.cpp linguist-language=C++ linguist-vendored=false
+
+# Hide everything else from the language bar
+README.md linguist-documentation
+assets/* linguist-documentation
+LICENSE linguist-documentation
+node_modules/* linguist-vendored
+build/* linguist-vendored
+.gradle/* linguist-vendored
