@@ -21,6 +21,14 @@
 
 ---
 
+## 🛰️ The Identity
+
+The name **Velion** is a fusion of movement, speed, and technical precision:
+*   **Vel** — Derived from *velocity* (speed), *velox* (Latin for swift), and *veil* (representing the subtle, hidden background processes).
+*   **Ion** — Representing science, energy, and the high-tech foundation of the ecosystem.
+
+---
+
 ## ⚡ Hybrid Intelligence Architecture
 
 Velion doesn't just send a signal; it intelligently chooses the most efficient path based on your environment.
