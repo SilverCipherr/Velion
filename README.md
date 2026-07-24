@@ -6,7 +6,7 @@
 
 **Velion** is a modern, cross-platform remote control system designed to wake up computers via **Wake-on-LAN (WoL)** using an ESP32 microcontroller and MQTT. It features a sleek, security-hardened Web dashboard and a native Android application.
 
-[**Live Demo (Web)**](https://velion-demo.vercel.app) • [**Download Android APK**](https://github.com/SilverCipherr/Velion/releases/download/1.0.0/Velion-demo.apk)
+[**Live Demo (Web)**](https://velion-demo.vercel.app) • [**Download Android APK**](https://github.com/SilverCipherr/Velion/releases/download/1.0.1/Velion-demo.apk)
 ---
 
 ## 🚀 The Architecture
