@@ -20,6 +20,31 @@
 
 ---
 
+## ✨ New in Version 2.2+
+
+### 📱 Multi-Device Command Center
+
+Manage multiple targets (e.g., *Home Workstation*, *Office PC*, *Media Server*) from a single unified dashboard. Each device profile stores its own MAC address, MQTT topic, and network gateway.
+
+### 🛠️ AI-Powered ESP32 Code Generator
+
+Instantly generate production-ready C++ code for your ESP32 hardware directly from the app. It automatically injects your WiFi credentials, target MAC, and secure MQTT topics into a low-latency networking template.
+
+### 📖 Interactive Onboarding
+
+New step-by-step interactive guides for **Windows** and **Linux**. Learn exactly how to configure BIOS, Device Manager, and `ethtool` settings to ensure your hardware is ready for remote wake.
+
+---
+
+## 📸 System Interface
+
+<p align="center">
+  <img src="./assets/screenshot_login.png" width="450" alt="Login Interface" style="border-radius: 12px; margin-right: 20px; vertical-align: middle;">
+  <img src="./assets/screenshot_dash.png" width="380" alt="Dashboard Interface" style="border-radius: 12px; vertical-align: middle;">
+</p>
+
+---
+
 ## 🛰️ The Identity
 
 The name **Velion** is a fusion of movement, speed, and technical precision:
@@ -44,24 +69,6 @@ When the system detects you are on your <b>Home SSID</b>, the application switch
 ### 🌐 Remote MQTT Relay (Global Reach)
 
 When outside your local network, Velion utilizes a hardened MQTT bridge. The command is routed through an encrypted topic to your **ESP32 Controller**, which then fires the physical Magic Packet within your home network.
-
----
-
-## ✨ New in Version 2.2+
-
-### 📱 Multi-Device Command Center
-
-Manage multiple targets (e.g., *Home Workstation*, *Office PC*, *Media Server*) from a single unified dashboard. Each device profile stores its own MAC address, MQTT topic, and network gateway.
-
-### 🛠️ AI-Powered ESP32 Code Generator
-
-Instantly generate production-ready C++ code for your ESP32 hardware directly from the app. It automatically injects your WiFi credentials, target MAC, and secure MQTT topics into a low-latency networking template.
-
-### 📖 Interactive Onboarding
-
-New step-by-step interactive guides for **Windows** and **Linux**. Learn exactly how to configure BIOS, Device Manager, and `ethtool` settings to ensure your hardware is ready for remote wake.
-
----
 
 ## 🔐 Core Pillars
 
@@ -91,15 +98,6 @@ New step-by-step interactive guides for **Windows** and **Linux**. Learn exactly
 | **Hardware** | <img src="https://img.shields.io/badge/C++-00599C?logo=c%2B%2B&logoColor=white" height="20"> | ESP32, PubSubClient, UDP Multicast |
 | **Storage** | <img src="https://img.shields.io/badge/Package-com.velion.wol-280001" height="20"> | SharedPrefs (JSON-based multi-profile) |
 | **Logic** | <img src="https://img.shields.io/badge/Protocol-Hybrid-E77B49" height="20"> | Raw UDP Magic Packets + MQTT SSL/TLS |
-
----
-
-## 📸 System Interface
-
-<p align="center">
-  <img src="./assets/screenshot_login.png" width="450" alt="Login Interface" style="border-radius: 12px; margin-right: 20px; vertical-align: middle;">
-  <img src="./assets/screenshot_dash.png" width="380" alt="Dashboard Interface" style="border-radius: 12px; vertical-align: middle;">
-</p>
 
 ---
 
