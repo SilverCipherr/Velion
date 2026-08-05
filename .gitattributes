@@ -1,10 +1,8 @@
 * linguist-vendored
 
 .pessidog/thief.kt linguist-language=Kotlin linguist-vendored=false
-.pessidog/jew.js linguist-language=JavaScript linguist-vendored=false
 .pessidog/penalty.cpp linguist-language=C++ linguist-vendored=false
 
 README.md linguist-documentation
 assets/* linguist-documentation
 LICENSE linguist-documentation
-//
