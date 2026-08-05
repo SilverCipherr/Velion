@@ -1,4 +1,4 @@
-# Velion · Hybrid Remote Control Ecosystem
+# Velion-WoL from Anywhere · Professional Remote Wake Ecosystem
 
 <p align="center">
   <img src="./assets/icon.png" width="128" height="128" alt="Velion Logo">
@@ -7,16 +7,15 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Architecture-Hybrid_Local_%26_Remote-E77B49?style=for-the-badge" alt="Hybrid Architecture">
   <img src="https://img.shields.io/badge/Security-Hardened-F76E5D?style=for-the-badge" alt="Security Hardened">
-  <img src="https://img.shields.io/badge/Biometrics-FIDO2_/_Fingerprint-280001?style=for-the-badge" alt="Biometrics">
+  <img src="https://img.shields.io/badge/Biometrics-Fingerprint_/_FIDO2-280001?style=for-the-badge" alt="Biometrics">
 </p>
 
 <p align="center">
-  <b>Velion</b> is a high-performance, cross-platform ecosystem engineered to provide absolute control over PC power states. By merging <b>Local Network UDP broadcasting</b> with <b>Global MQTT signaling</b>, Velion offers a zero-compromise solution for waking computers securely from anywhere in the world.
+  <b>Velion-WoL from Anywhere</b> is a high-performance, standalone Android ecosystem engineered to provide absolute control over PC power states. By merging <b>Local Network UDP broadcasting</b> with <b>Global MQTT signaling</b>, Velion offers a zero-compromise solution for waking computers securely from anywhere in the world.
 </p>
 
 <p align="center">
-  <a href="https://velion-demo.vercel.app"><b>Live Web Demo</b></a> • 
-  <a href="https://github.com/SilverCipherr/Velion/releases/download/v1.2.0/Velion-demo.v1.2.0.apk"><b>Android APK</b></a>
+  <a href="https://github.com/SilverCipherr/Velion/releases/latest"><b>Download Latest APK</b></a>
 </p>
 
 ---
@@ -38,48 +37,51 @@ The name **Velion** is a fusion of movement, speed, and technical precision:
 Velion doesn't just send a signal; it intelligently chooses the most efficient path based on your environment.
 
 ### 🏠 Local-First Dispatch (Zero Latency)
-When the system detects you are on your <b>Home SSID</b>, the Android application switches to **Direct Mode**. It bypasses all cloud brokers and broadcasts a Raw UDP Magic Packet directly to the target PC's MAC address. This ensures instant wake-up even if your ESP32 controller is offline.
+When the system detects you are on your <b>Home SSID</b>, the application switches to **Direct Mode**. It bypasses all cloud brokers and broadcasts a Raw UDP Magic Packet directly to the target PC's MAC address. This ensures instant wake-up even if your hardware controller is offline.
 
 ### 🌐 Remote MQTT Relay (Global Reach)
 When outside your local network, Velion utilizes a hardened MQTT bridge. The command is routed through an encrypted topic to your **ESP32 Controller**, which then fires the physical Magic Packet within your home network.
 
-### 📊 Capability Matrix
+---
 
-| Scenario | ESP32 Status | Web UI Result | Android App Result |
-| :--- | :--- | :--- | :--- |
-| **You are at Home** | **OFF** | ❌ Cannot Wake | ✅ **Wakes PC (Direct UDP)** |
-| **You are Remote** | **OFF** | ❌ Cannot Wake | ❌ Cannot Wake |
-| **Anywhere** | **ON** | ✅ Wakes PC (via ESP32) | ✅ Wakes PC (via ESP32) |
+## ✨ New in Version 2.2+
+
+### 📱 Multi-Device Command Center
+Manage multiple targets (e.g., *Home Workstation*, *Office PC*, *Media Server*) from a single unified dashboard. Each device profile stores its own MAC address, MQTT topic, and network gateway.
+
+### 🛠️ AI-Powered ESP32 Code Generator
+Instantly generate production-ready C++ code for your ESP32 hardware directly from the app. It automatically injects your WiFi credentials, target MAC, and secure MQTT topics into a low-latency networking template.
+
+### 📖 Interactive Onboarding
+New step-by-step interactive guides for **Windows** and **Linux**. Learn exactly how to configure BIOS, Device Manager, and `ethtool` settings to ensure your hardware is ready for remote wake.
 
 ---
 
-## ✨ Core Pillars
+## 🔐 Core Pillars
 
-### 🔐 Uncompromising Security
-*   **Cryptographic Hashing**: Passwords are never stored in plain text, utilizing **SHA-256** hashing via the native Web Crypto API and Kotlin standard libraries.
-*   **Biometric Perimeter**: Experience zero-friction entry with **Android Biometric API** (Fingerprint/Face) and **WebAuthn (FIDO2)** for secure, password-less authentication on the web dashboard.
-*   **Rate-Limited Core**: An intelligent lockout mechanism provides edge-level protection against automated brute-force attempts.
+### 🛡️ Hardened Security
+*   **Encrypted Identity**: Secure your app with a custom standalone password.
+*   **Biometric Perimeter**: Native **Android Biometric API** integration for instant, secure access via Fingerprint.
+*   **Zero-Cloud Storage**: All device configurations are stored locally and securely on your device using the modern `com.velion.wol` package structure.
 
 ### 📡 Hybrid Connectivity
-*   **SSID Awareness**: Automatic network detection ensures you are always using the fastest available path.
-*   **UDP Broadcasting**: Direct hardware-level signaling for the Android native client.
-*   **Resilient Fallback**: Automatic failover to MQTT Broker if local communication is restricted.
+*   **Gateway Awareness**: Automatic detection of your home network gateway IP ensures you always use the fastest path.
+*   **Resilient Fallback**: Seamless transition between local UDP and global MQTT signaling.
 
 ### 🎨 Elite UX Design
-*   **Obsidian Heritage Theme**: A custom dark aesthetic built for high-contrast legibility and professional appeal.
-*   **Signal Path Viz**: Real-time SVG animations visualize the data packet traveling from your device to the PC.
-*   **PWA Core**: The web dashboard is fully installable and features comprehensive offline caching via Service Workers.
+*   **Obsidian Heritage Theme**: A custom dark aesthetic built for high-contrast legibility.
+*   **Signal Path Viz**: Real-time animations visualize the data packet's journey from your phone to the target PC.
 
 ---
 
-## 🛠️ Technical Deep-Dive
+## 🛠️ Technical Stack
 
 | Layer | Component | Implementation |
 | :--- | :--- | :--- |
 | **Android** | <img src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white" height="20"> | Jetpack Compose, Coroutines, Material 3, HiveMQ |
-| **Web** | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" height="20"> | ES6+, MQTT.js, WebAuthn API, Vercel Edge |
 | **Hardware** | <img src="https://img.shields.io/badge/C++-00599C?logo=c%2B%2B&logoColor=white" height="20"> | ESP32, PubSubClient, UDP Multicast |
-| **Logic** | <img src="https://img.shields.io/badge/Protocol-Hybrid-E77B49" height="20"> | Raw UDP Magic Packets + MQTT WebSockets |
+| **Storage** | <img src="https://img.shields.io/badge/Package-com.velion.wol-280001" height="20"> | SharedPrefs (JSON-based multi-profile) |
+| **Logic** | <img src="https://img.shields.io/badge/Protocol-Hybrid-E77B49" height="20"> | Raw UDP Magic Packets + MQTT SSL/TLS |
 
 ---
 
@@ -92,20 +94,11 @@ When outside your local network, Velion utilizes a hardened MQTT bridge. The com
 
 ---
 
-## 🧪 Simulation & Showcase
-
-To maintain the privacy of the production infrastructure, this public repository operates in **Showcase Mode**:
-*   **Environment**: Connection, biometric flows, and dispatch sequences are high-fidelity simulations.
-*   **Credentials**: Access the dashboard using the demo password: `admin`.
-*   **Privacy**: All private MAC addresses, IP ranges, and private MQTT topics have been sanitized.
-
----
-
 ## 📄 Licensing & Rights
 
 Copyright (c) 2026 Prottay. All rights reserved. This project is proprietary software.
 
 ---
 <p align="center">
-  <i>Velion — Effortless Control. Absolute Security.</i>
+  <i>Velion-WoL from Anywhere — Effortless Control. Absolute Security.</i>
 </p>
