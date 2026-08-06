@@ -15,8 +15,16 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/SilverCipherr/Velion/releases/download/v2.2.1/Velion-WoL.from.Anywhere.apk"><b>Download Latest APK</b></a>
+  <a href="https://github.com/SilverCipherr/Velion/releases/download/v2.2.2/Velion-WoL.from.Anywhere.apk"><b>Download Latest APK</b></a>
 </p>
+
+---
+
+## 🚀 Latest Releases
+
+**V2.2.2**
+
+* QoL update: Added setup guide on setting screen.
 
 ---
 
